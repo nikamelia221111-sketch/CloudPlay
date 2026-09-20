@@ -7,189 +7,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0a0d14;
-    --bg-panel:#0f1420;
-    --bg-panel-2:#121826;
-    --border:#212a3a;
-    --text:#eef2f8;
-    --text-dim:#8b93a7;
-    --text-faint:#5b6478;
-    --cyan:#2fe0e8;
-    --purple:#8b3ffb;
-    --grad: linear-gradient(90deg,var(--cyan),var(--purple));
-    padding-top: env(safe-area-inset-top,0px);
-    padding-bottom: env(safe-area-inset-bottom,0px);
-    box-sizing:border-box;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-padding-top:env(safe-area-inset-top,0px);}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;}
-  body{background:
-      radial-gradient(ellipse 900px 500px at 15% 0%, rgba(139,63,251,0.16), transparent 60%),
-      radial-gradient(ellipse 700px 500px at 85% 5%, rgba(47,224,232,0.10), transparent 60%),
-      var(--bg);
-  }
-  h1,h2,h3{font-family:'Rajdhani',sans-serif;font-weight:700;margin:0;letter-spacing:0.3px;}
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
-
-  /* NAV */
-  header{position:sticky;top:0;z-index:40;background:rgba(10,13,20,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
-  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px;}
-  .brand{display:flex;align-items:center;gap:10px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:19px;}
-  .brand-mark{width:30px;height:30px;border-radius:8px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
-  .nav-links{display:flex;align-items:center;gap:28px;font-size:14.5px;color:var(--text-dim);}
-  .nav-links a:hover{color:var(--text);}
-  .nav-right{display:flex;align-items:center;gap:14px;}
-  .icon-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-dim);flex-shrink:0;}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 22px;border-radius:9px;font-weight:600;font-size:14.5px;cursor:pointer;border:1px solid transparent;white-space:nowrap;}
-  .btn-grad{background:var(--grad);color:#08131a;}
-  .btn-ghost{background:rgba(255,255,255,0.03);border-color:var(--border);color:var(--text);}
-  .btn-outline{background:transparent;border:1px solid var(--border);color:var(--text-dim);font-size:13.5px;padding:8px 16px;}
-  .btn-cyan{background:var(--cyan);color:#06181b;}
-  .btn-purple{background:var(--purple);color:#fff;}
-  @media (max-width:900px){ .nav-links{display:none;} }
-
-  /* HERO */
-  .hero{padding:76px 0 70px;}
-  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--cyan);background:rgba(47,224,232,0.08);border:1px solid rgba(47,224,232,0.25);padding:6px 14px;border-radius:20px;margin-bottom:22px;}
-  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);}
-  .hero h1{font-size:56px;line-height:1.03;letter-spacing:0.5px;}
-  .hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
-  .hero p.lead{color:var(--text-dim);font-size:16.5px;line-height:1.6;margin:22px 0 30px;max-width:480px;}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px;}
-  .fine{font-size:13px;color:var(--text-faint);margin-bottom:18px;}
-  .fine b{color:var(--text-dim);}
-  .platforms{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--text-faint);}
-  .platforms span.lbl{text-transform:uppercase;letter-spacing:1px;font-size:11px;}
-  .platforms b{color:var(--text-dim);font-weight:600;}
-
-  .hero-card{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--border);background:var(--bg-panel);box-shadow:0 30px 80px -20px rgba(139,63,251,0.35);}
-  .hero-card .titlebar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border);font-size:11.5px;color:var(--text-faint);}
-  .dots{display:flex;gap:6px;}
-  .dots i{width:8px;height:8px;border-radius:50%;background:#3a4356;display:block;}
-  .hero-art{position:relative;height:230px;background:
-      radial-gradient(circle at 30% 30%, rgba(47,224,232,0.35), transparent 55%),
-      radial-gradient(circle at 75% 65%, rgba(139,63,251,0.45), transparent 55%),
-      linear-gradient(160deg,#12182a,#1b1030 60%,#0c1420);
-  }
-  .hero-art::after{content:"🎮";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:64px;opacity:0.85;filter:drop-shadow(0 0 30px rgba(47,224,232,0.5));}
-  .hero-stats-row{display:flex;justify-content:space-between;padding:14px 16px;border-top:1px solid var(--border);font-size:12px;color:var(--text-faint);gap:10px;}
-  .hero-stats-row b{display:block;color:var(--text);font-size:14px;margin-top:2px;}
-  .hero-stats-row .cyan{color:var(--cyan);}
-  .hero-stats-row .purple{color:var(--purple);}
-
-  /* STAT STRIP */
-  .stat-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:34px 0;}
-  .stat-strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-  .stat{display:flex;gap:12px;align-items:flex-start;}
-  .stat .ic{color:var(--cyan);font-size:18px;flex-shrink:0;margin-top:2px;}
-  .stat b{display:block;font-size:19px;font-family:'Rajdhani',sans-serif;font-weight:700;}
-  .stat span{font-size:12.5px;color:var(--text-faint);}
-  @media (max-width:800px){.stat-strip .wrap{grid-template-columns:repeat(2,1fr);}}
-
-  /* SECTION HEADERS */
-  section{padding:78px 0;}
-  .sec-head{margin-bottom:38px;}
-  .sec-head .eyebrow{margin-bottom:16px;}
-  .sec-head h2{font-size:34px;margin-bottom:12px;}
-  .sec-head p{color:var(--text-dim);font-size:15px;max-width:560px;line-height:1.6;}
-  .sec-head-row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;}
-  .tabs{display:flex;gap:8px;}
-  .tab{font-size:13px;padding:8px 16px;border-radius:8px;color:var(--text-dim);border:1px solid var(--border);}
-  .tab.active{background:rgba(255,255,255,0.05);color:var(--text);border-color:var(--border);}
-
-  /* GAME CARDS */
-  .games-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .game-card{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--bg-panel);}
-  .game-cover{position:relative;height:200px;display:flex;align-items:flex-end;padding:14px;background-size:cover;background-position:center;}
-  .game-cover .badges{position:absolute;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;font-size:10.5px;font-weight:600;}
-  .badge{background:rgba(0,0,0,0.55);backdrop-filter:blur(4px);padding:4px 9px;border-radius:6px;}
-  .badge.pill{background:var(--purple);}
-  .cover-1{background:linear-gradient(180deg,rgba(6,10,18,0.1),rgba(6,10,18,0.9)),radial-gradient(circle at 30% 20%,#2fe0e8 0,transparent 40%),linear-gradient(160deg,#0d1b26,#131022);}
-  .cover-2{background:linear-gradient(180deg,rgba(6,10,18,0.1),rgba(6,10,18,0.9)),radial-gradient(circle at 60% 30%,#ff9d4d 0,transparent 45%),linear-gradient(160deg,#241016,#0f1420);}
-  .cover-3{background:linear-gradient(180deg,rgba(6,10,18,0.1),rgba(6,10,18,0.9)),radial-gradient(circle at 50% 40%,#8b3ffb 0,transparent 45%),linear-gradient(160deg,#0d1030,#101826);}
-  .game-cover h4{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,0.6);}
-  .game-body{padding:16px 16px 18px;}
-  .game-body .genre{font-size:11px;color:var(--purple);font-weight:600;margin-bottom:4px;}
-  .game-body p{font-size:13px;color:var(--text-dim);line-height:1.5;margin:0 0 12px;}
-  .game-meta{display:flex;justify-content:space-between;font-size:12px;}
-  .game-meta .players{color:var(--cyan);}
-  .game-meta .cta{color:var(--text-dim);}
-  @media (max-width:860px){.games-grid{grid-template-columns:1fr;}}
-
-  /* HOW IT WORKS */
-  .how-panel{border:1px solid var(--border);border-radius:20px;padding:48px;background:linear-gradient(180deg,rgba(139,63,251,0.05),transparent 40%),var(--bg-panel);}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px;}
-  .step{border:1px solid var(--border);border-radius:14px;padding:22px;background:var(--bg-panel-2);}
-  .step-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
-  .step-ic{width:38px;height:38px;border-radius:10px;background:rgba(47,224,232,0.1);display:flex;align-items:center;justify-content:center;font-size:17px;}
-  .step-num{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:24px;color:var(--text-faint);}
-  .step h3{font-size:17px;margin-bottom:8px;}
-  .step p{font-size:13.5px;color:var(--text-dim);line-height:1.55;margin:0 0 12px;}
-  .step .link{font-size:12.5px;color:var(--cyan);font-weight:600;}
-  @media (max-width:860px){.steps{grid-template-columns:1fr;} .how-panel{padding:28px;}}
-
-  /* PRICING */
-  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
-  .plan{border:1px solid var(--border);border-radius:16px;padding:28px;background:var(--bg-panel);display:flex;flex-direction:column;}
-  .plan.featured{border:1px solid rgba(47,224,232,0.5);background:linear-gradient(180deg,rgba(47,224,232,0.06),rgba(139,63,251,0.04));box-shadow:0 0 0 1px rgba(47,224,232,0.15),0 20px 60px -20px rgba(47,224,232,0.35);position:relative;}
-  .plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--grad);color:#08131a;font-size:11.5px;font-weight:700;padding:6px 16px;border-radius:20px;white-space:nowrap;}
-  .plan-tag{font-size:11px;letter-spacing:0.5px;color:var(--text-faint);margin-bottom:14px;}
-  .plan-tag.cyan{color:var(--cyan);}
-  .plan-tag.purple{color:var(--purple);}
-  .price{font-family:'Rajdhani',sans-serif;font-size:38px;font-weight:700;margin-bottom:6px;}
-  .price span{font-size:14px;color:var(--text-faint);font-weight:500;}
-  .plan-desc{font-size:13px;color:var(--text-dim);line-height:1.5;margin-bottom:20px;min-height:40px;}
-  .plan-feats{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:11px;font-size:13.5px;}
-  .plan-feats li{display:flex;gap:9px;align-items:flex-start;color:var(--text-dim);}
-  .plan-feats li.off{color:var(--text-faint);}
-  .plan-feats .ok{color:var(--cyan);flex-shrink:0;}
-  .plan-feats .no{color:var(--text-faint);flex-shrink:0;}
-  .plan .btn{margin-top:auto;width:100%;}
-  @media (max-width:860px){.pricing-grid{grid-template-columns:1fr;}}
-
-  /* FOOTER STRIP */
-  .strip{border-top:1px solid var(--border);padding:44px 0;}
-  .strip .wrap{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:24px;align-items:center;}
-  .strip-item{display:flex;gap:12px;align-items:center;}
-  .strip-item .ic{width:36px;height:36px;border-radius:9px;background:rgba(47,224,232,0.08);color:var(--cyan);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .strip-item span{font-size:13.5px;color:var(--text-dim);font-weight:500;}
-  .strip-cta{border:1px solid var(--border);border-radius:14px;padding:20px 24px;background:var(--bg-panel);}
-  .strip-cta .lbl{font-size:11px;color:var(--purple);letter-spacing:0.5px;margin-bottom:6px;}
-  .strip-cta h3{font-size:19px;}
-  @media (max-width:860px){.strip .wrap{grid-template-columns:1fr;}}
-
-  footer{border-top:1px solid var(--border);padding:36px 0;text-align:center;color:var(--text-faint);font-size:13px;}
-
-  @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;}
-    .hero h1{font-size:40px;}
-  }
-  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
-</style>
+<link rel="stylesheet" href="assets/reset.css">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <header>
   <nav class="wrap">
     <div class="brand"><span class="brand-mark">▶</span> CloudPlay</div>
-    <div class="nav-links">
-      <a href="#">Games &amp; Genres</a>
-      <a href="#">Features</a>
-      <a href="#">Reach Users</a>
-      <a href="#">Pricing</a>
-      <a href="#">Supported Devices</a>
+    <div class="nav-links"> 
+      <a href="#games">Games &amp; Genres</a>
+      <a href="#features">Features</a>
+      <a href="#how">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#devices">Supported Devices</a>
       <a href="#">Dashboard</a>
     </div>
     <div class="nav-right">
-      <div class="icon-btn">⌕</div>
+      <button class="icon-btn" aria-label="Search">⌕</button>
       <a href="#" class="btn-outline" style="border-radius:8px;">CloudPlay Gaming</a>
-      <a href="#" class="btn btn-cyan" style="padding:9px 18px;">Go Games</a>
+      <a href="#games" class="btn btn-cyan" style="padding:9px 18px;">Go Games</a>
     </div>
   </nav>
 </header>
@@ -199,10 +36,10 @@
     <div>
       <div class="eyebrow"><span class="dot"></span> INSTANT ACCESS TO 500+ GAMES, NO INSTALLS</div>
       <h1>YOUR<br>GAMES.<br><span class="grad">ANYWHERE.</span><br>INSTANTLY.</h1>
-      <p class="lead">Stream disc-demanding, AAA titles directly from our 10ms cloud infrastructure. Zero downloads, infinite storage, powered by dedicated RTX 4090 HDR rigs, playable anywhere.</p>
+      <p class="lead">Stream disc-demanding, AAA titles directly from our 10ms cloud infrastructure. Zero downloads, infinite storage, powered by dedicated RTX 4090 rigs, playable anywhere.</p>
       <div class="hero-ctas">
-        <a href="#" class="btn btn-grad">▶ Start Playing</a>
-        <a href="#" class="btn btn-ghost">Explore 500+ Games</a>
+        <a href="#pricing" class="btn btn-grad">▶ Start Playing</a>
+        <a href="#games" class="btn btn-ghost">Explore 500+ Games</a>
       </div>
       <div class="fine">✓ No signup required to browse — <b>Free trial includes 3 titles, no card needed</b></div>
       <div class="platforms">
@@ -235,7 +72,7 @@
   </div>
 </div>
 
-<section>
+<section id="games">
   <div class="wrap">
     <div class="sec-head-row sec-head">
       <div>
@@ -244,9 +81,9 @@
         <p>Zero installation queues. No dedicated downloads. Get instant and full fingertip access to a rotating world of new arrivals.</p>
       </div>
       <div class="tabs">
-        <div class="tab active">All Games</div>
-        <div class="tab">Trending AAA</div>
-        <div class="tab">Day-One</div>
+        <button class="tab active">All Games</button>
+        <button class="tab">Trending AAA</button>
+        <button class="tab">Day-One</button>
       </div>
     </div>
 
@@ -254,7 +91,7 @@
       <div class="game-card">
         <div class="game-cover cover-1">
           <div class="badges"><span class="badge">4K / 120FPS</span><span class="badge pill">DAY-ONE</span></div>
-          <h4>CyberProtocol 2099</h4>
+          <h4>CyberPunk 2077</h4>
         </div>
         <div class="game-body">
           <div class="genre">Open World · RPG</div>
@@ -288,7 +125,7 @@
   </div>
 </section>
 
-<section>
+<section id="how">
   <div class="wrap">
     <div class="how-panel">
       <div class="eyebrow"><span class="dot"></span> FROM CLICK TO GAMEPLAY</div>
@@ -319,7 +156,7 @@
   </div>
 </section>
 
-<section>
+<section id="pricing">
   <div class="wrap" style="text-align:center;">
     <div class="eyebrow"><span class="dot"></span> MEMBERSHIP &amp; SUBSCRIPTIONS</div>
     <h2 style="font-size:32px;">Choose Your Computing Rig</h2>
@@ -327,42 +164,42 @@
 
     <div class="pricing-grid" style="text-align:left;">
       <div class="plan">
-        <div class="plan-tag">FREE TO PLAY</div>
+        <div class="plan-tag">Free Pilot</div>
         <div class="price">$0<span> / month</span></div>
-        <div class="plan-desc">Test the reliability of our cloud streaming with select free-to-play library.</div>
+        <div class="plan-desc">Perfect for trying out cloud streaming mechanics on any browser.</div>
         <ul class="plan-feats">
-          <li><span class="ok">✓</span> 1080p Resolution &amp; 60FPS</li>
+          <li><span class="ok">✓</span> 1080p Resolution @ 60 FPS</li>
           <li><span class="ok">✓</span> Standard Queue Access</li>
-          <li><span class="ok">✓</span> 1-Hour Free Session Length</li>
+          <li><span class="ok">✓</span> 1-Hour Continuous Session Length</li>
           <li><span class="ok">✓</span> Access to 40+ Free Titles</li>
-          <li class="off"><span class="no">✕</span> Ray Tracing / RTX</li>
+          <li class="off"><span class="no">✕</span> Ray Tracing (RTX)</li>
         </ul>
         <a href="#" class="btn btn-ghost">Get Started Free</a>
       </div>
       <div class="plan featured">
         <div class="plan-badge">MOST POPULAR</div>
-        <div class="plan-tag cyan">PREMIUM RIG</div>
+        <div class="plan-tag cyan">Pro Streamer</div>
         <div class="price">$14.99<span> / month</span></div>
-        <div class="plan-desc">High-performance gaming rigs for AAA titles at max settings and low latency.</div>
+        <div class="plan-desc">High-performance gaming with RTX enabled for mainstream visual perfection.</div>
         <ul class="plan-feats">
-          <li><span class="ok">✓</span> 4K HDR Resolution &amp; 120FPS</li>
-          <li><span class="ok">✓</span> Priority Peer-Lane Access</li>
-          <li><span class="ok">✓</span> 4-Hour Continuous Session Time</li>
-          <li><span class="ok">✓</span> Full Ray-Tracing Support</li>
-          <li><span class="ok">✓</span> Access to 350+ Premium &amp; Genre Titles</li>
+          <li><span class="ok">✓</span> 4K HDR Resolution @ 60 FPS</li>
+          <li><span class="ok">✓</span> Priority Fast-Lane Queue Access</li>
+          <li><span class="ok">✓</span> 6-Hour Continuous Session Time</li>
+          <li><span class="ok">✓</span> Full RTX Hardware Ray Tracing</li>
+          <li><span class="ok">✓</span> Access to 300+ Premium Library Titles</li>
         </ul>
-        <a href="#" class="btn btn-cyan">Claim &amp; Play Free Trial</a>
+        <a href="#" class="btn btn-cyan">Claim 14-Day Pro Trial</a>
       </div>
       <div class="plan">
-        <div class="plan-tag purple">ULTIMATE ENTHUSIAST RIG</div>
+        <div class="plan-tag purple">Ultimate Esports Pod</div>
         <div class="price">$24.99<span> / month</span></div>
-        <div class="plan-desc">Dedicated RTX 4090 virtual environments for extreme performance seekers.</div>
+        <div class="plan-desc">Dedicated unthrottled RTX 4090 virtual workstation for demanding pros.</div>
         <ul class="plan-feats">
-          <li><span class="ok">✓</span> 4K/144Hz Extreme Sync</li>
-          <li><span class="ok">✓</span> Zero Wait VIP Server Reservation</li>
-          <li><span class="ok">✓</span> Unlimited Continuous Session Time</li>
-          <li><span class="ok">✓</span> Exclusive 100% All-Genre Library</li>
-          <li><span class="ok">✓</span> Day-One Beta Access &amp; Discount Perks</li>
+          <li><span class="ok purple">✓</span> 4K HDR @ 120 FPS Extreme Sync</li>
+          <li><span class="ok purple">✓</span> Zero-Wait VIP Instant Pod Allocation</li>
+          <li><span class="ok purple">✓</span> Unlimited Continuous Session Hours</li>
+          <li><span class="ok purple">✓</span> Dedicated RTX 4090 Supercluster Rig</li>
+          <li><span class="ok purple">✓</span> Day-One Blockbuster Access &amp; Discord Perks</li>
         </ul>
         <a href="#" class="btn btn-purple">Upgrade to Ultimate</a>
       </div>
@@ -370,16 +207,63 @@
   </div>
 </section>
 
-<div class="strip">
+<section id="features">
   <div class="wrap">
-    <div class="strip-item"><div class="ic">🖥</div><span>No Gaming PC Required</span></div>
-    <div class="strip-item"><div class="ic">☁</div><span>Cloud Saves Everywhere</span></div>
-    <div class="strip-cta">
-      <div class="lbl">PLAY THE WAY YOU WANT</div>
-      <h3>One Account. Every Display You Own.</h3>
+    <div class="feature-split">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-ic">🖥</div>
+          <h3>No Gaming PC Required</h3>
+          <p>Turn a $200 Chromebook or 5-year-old laptop into an RTX 4090 battlestation capable of path-traced raytracing.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-ic purple">☁</div>
+          <h3>Cloud Saves Everywhere</h3>
+          <p>Seamlessly link your Steam, Epic Games, Xbox, and Ubisoft accounts. Your achievements, mods, and saves stay unified.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-ic">✛</div>
+          <h3>Universal Controllers &amp; KBM</h3>
+          <p>Full haptic feedback support for DualSense, Xbox Wireless, Nintendo Switch Pro, and raw 1000Hz gaming mice.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-ic purple">📶</div>
+          <h3>Adaptive Bitrate Engine</h3>
+          <p>Dynamic AI codec modulation scales smoothly between 15 Mbps to 100 Mbps, preventing frame freezing during Wi-Fi dips.</p>
+        </div>
+      </div>
+
+      <div class="device-panel" id="devices">
+        <div class="eyebrow" style="display:inline-block;">PLAY ON ANY HARDWARE</div>
+        <h2>One Account. Every Display You Own.</h2>
+        <p>CloudPlay works natively in web browsers without plugin dependencies, as well as dedicated apps for desktop and handheld environments.</p>
+        <div class="device-grid">
+          <div class="device"><span class="ic">💻</span><span>Windows</span></div>
+          <div class="device"><span class="ic">💻</span><span>macOS</span></div>
+          <div class="device"><span class="ic">📱</span><span>iOS / iPad</span></div>
+          <div class="device"><span class="ic">📱</span><span>Android</span></div>
+          <div class="device"><span class="ic">📺</span><span>Android / Apple TV</span></div>
+          <div class="device"><span class="ic">🌐</span><span>Web Browsers</span></div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-panel">
+      <div class="eyebrow"><span class="dot"></span> Instant Provisioning • Immediate Access</div>
+      <h2>Ready to Step Into the Future of Gaming?</h2>
+      <p>Start your 14-day free trial today. Connect your controller, choose any title from our library, and enter the stream in seconds.</p>
+      <form class="cta-form" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email to claim trial..." aria-label="Email address" required>
+        <button type="submit" class="btn btn-cyan">Get Started →</button>
+      </form>
+      <div class="cta-fine">No credit card charged until day 14. Instant cancellation in Account Settings.</div>
+    </div>
+  </div>
+</section>
 
 <footer>© 2026 CloudPlay. All rights reserved.</footer>
 
