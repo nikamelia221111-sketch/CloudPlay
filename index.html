@@ -1,271 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CloudPlay — Your Games. Anywhere. Instantly.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/reset.css">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nexora – Play instantly, on any device</title>
+  <meta name="description" content="Stream hundreds of games instantly with no downloads. Play solo or squad up with friends.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <nav class="wrap">
-    <div class="brand"><span class="brand-mark">▶</span> CloudPlay</div>
-    <div class="nav-links"> 
-      <a href="#games">Games &amp; Genres</a>
-      <a href="#features">Features</a>
-      <a href="#how">How It Works</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#devices">Supported Devices</a>
-      <a href="#">Dashboard</a>
-    </div>
-    <div class="nav-right">
-      <button class="icon-btn" aria-label="Search">⌕</button>
-      <a href="#" class="btn-outline" style="border-radius:8px;">CloudPlay Gaming</a>
-      <a href="https://store.steampowered.com/login/?redir=&redir_ssl=1" class="btn btn-cyan" style="padding:9px 18px;">Login with Steam</a>
-    </div>
-  </nav>
-</header>
+  <!-- ======================= NAV ======================= -->
+  <header>
+    <nav class="wrap" aria-label="Main">
+      <a href="#" class="brand">
+        <span class="brand-mark" aria-hidden="true">⚡</span>
+        Nexora
+      </a>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow"><span class="dot"></span> INSTANT ACCESS TO 500+ GAMES, NO INSTALLS</div>
-      <h1>YOUR<br>GAMES.<br><span class="grad">ANYWHERE.</span><br>INSTANTLY.</h1>
-      <p class="lead">Stream disc-demanding, AAA titles directly from our 10ms cloud infrastructure. Zero downloads, infinite storage, powered by dedicated RTX 4090 rigs, playable anywhere.</p>
-      <div class="hero-ctas">
-        <a href="#pricing" class="btn btn-grad">▶ Start Playing</a>
-        <a href="#games" class="btn btn-ghost">Explore 500+ Games</a>
+      <div class="nav-links">
+        <a href="#games">Games</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#features">Features</a>
       </div>
-      <div class="fine">✓ No signup required to browse — <b>Free trial includes 3 titles, no card needed</b></div>
-      <div class="platforms">
-        <span class="lbl">Platform-ready:</span>
-        <b>PC / Mac</b><b>iOS / Android</b><b>Smart TV</b><b>Chrome OS</b>
-      </div>
-    </div>
-    <div class="hero-card">
-      <div class="titlebar">
-        <div class="dots"><i></i><i></i><i></i></div>
-        <span>NOW STREAMING · NORTHEAST, US</span>
-        <span>SIGNAL: <b style="color:var(--cyan)">EXCELLENT</b></span>
-      </div>
-      <div class="hero-art"></div>
-      <div class="hero-stats-row">
-        <div>VIRTUAL RIG LATENCY<b class="cyan">8.4 ms</b></div>
-        <div>CURRENT BITRATE<b class="purple">65 Mbps</b></div>
-        <div>RUNNING ON<b>Omega G2 Ultimate</b></div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<div class="stat-strip">
-  <div class="wrap">
-    <div class="stat"><div class="ic">⚡</div><div><b>&lt; 10ms</b><span>Avg. Perception Latency</span></div></div>
-    <div class="stat"><div class="ic">◆</div><div><b>4K HDR</b><span>Uncompressed Color Depth</span></div></div>
-    <div class="stat"><div class="ic">◷</div><div><b>120 FPS</b><span>Esports-Ready</span></div></div>
-    <div class="stat"><div class="ic">☰</div><div><b>Universal</b><span>Game Status Sync</span></div></div>
-  </div>
-</div>
-
-<section id="games">
-  <div class="wrap">
-    <div class="sec-head-row sec-head">
-      <div>
-        <div class="eyebrow" style="margin-bottom:14px;"><span class="dot"></span> BLOCKBUSTERS AND INDIE HITS</div>
-        <h2>Instant Access to 500+<br>Blockbusters</h2>
-        <p>Zero installation queues. No dedicated downloads. Get instant and full fingertip access to a rotating world of new arrivals.</p>
+      <div class="nav-right">
+        <button class="icon-btn" type="button" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-3.5-3.5"></path>
+          </svg>
+        </button>
+        <a href="#" class="btn btn-outline">Log in</a>
+        <a href="#pricing" class="btn btn-grad">Start playing</a>
       </div>
-      <div class="tabs">
-        <button class="tab active">All Games</button>
-        <button class="tab">Trending AAA</button>
-        <button class="tab">Day-One</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ======================= HERO ======================= -->
+    <div class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span>Now streaming in 4K</div>
+          <h1>Play anything, <span class="grad">anywhere.</span></h1>
+          <p class="lead">
+            Stream hundreds of games to your phone, laptop, or TV with no downloads and no waiting.
+            Pick a game, press play, and you're in.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#pricing" class="btn btn-grad">Start playing free</a>
+            <a href="#games" class="btn btn-ghost">Browse games</a>
+          </div>
+
+          <p class="fine"><b>Free forever</b> on the Starter plan. No credit card needed.</p>
+
+          <div class="platforms">
+            <span class="lbl">Works on</span>
+            <b>Windows</b>
+            <b>macOS</b>
+            <b>iOS</b>
+            <b>Android</b>
+            <b>Smart TV</b>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="titlebar">
+            <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span>Live session · Neon Drift</span>
+          </div>
+          <div class="hero-art" role="img" aria-label="Game controller preview"></div>
+          <div class="hero-stats-row">
+            <div>Latency<b class="cyan">12 ms</b></div>
+            <div>Resolution<b>4K · 60 fps</b></div>
+            <div>Players online<b class="purple">18,240</b></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="games-grid">
-      <div class="game-card">
-        <div class="game-cover cover-1">
-          <div class="badges"><span class="badge">4K / 120FPS</span><span class="badge pill">DAY-ONE</span></div>
-          <h4>CyberPunk 2077</h4>
+    <!-- ======================= STAT STRIP ======================= -->
+    <div class="stat-strip">
+      <div class="wrap">
+        <div class="stat">
+          <div class="ic" aria-hidden="true">🎮</div>
+          <div><b>400+</b><span>Games in the library</span></div>
         </div>
-        <div class="game-body">
-          <div class="genre">Open World · RPG</div>
-          <p>Sprawling cyberpunk city of corporate warfare, wetware upgrades and split-second gunfights.</p>
-          <div class="game-meta"><span class="players">● 38.3k live</span><span class="cta">Play Instantly →</span></div>
+        <div class="stat">
+          <div class="ic" aria-hidden="true">👥</div>
+          <div><b>2.1M</b><span>Active players</span></div>
         </div>
-      </div>
-      <div class="game-card">
-        <div class="game-cover cover-2">
-          <div class="badges"><span class="badge">4K/60</span><span class="badge pill" style="background:#ff7a45;">NEW SEASON</span></div>
-          <h4>World of Warcraft</h4>
+        <div class="stat">
+          <div class="ic" aria-hidden="true">⚡</div>
+          <div><b>&lt; 15 ms</b><span>Average latency</span></div>
         </div>
-        <div class="game-body">
-          <div class="genre">Fantasy · Strategy</div>
-          <p>Rally scattered clans, forge dragon alliances and hold the last citadel against the old war.</p>
-          <div class="game-meta"><span class="players">● 21.5k live</span><span class="cta">Queue Skip →</span></div>
-        </div>
-      </div>
-      <div class="game-card">
-        <div class="game-cover cover-3">
-          <div class="badges"><span class="badge">4K/144</span><span class="badge pill">Sci-Fi Racing</span></div>
-          <h4>Devil may cry 5</h4>
-        </div>
-        <div class="game-body">
-          <div class="genre">Racing · Multiplayer</div>
-          <p>Zero-gravity race tracks spun around orbital rings, hypertuned rigs, and no rubber-banding.</p>
-          <div class="game-meta"><span class="players">● 9.8k live</span><span class="cta">Watch &amp; Replay →</span></div>
+        <div class="stat">
+          <div class="ic" aria-hidden="true">🌍</div>
+          <div><b>32</b><span>Server regions</span></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<section id="how">
-  <div class="wrap">
-    <div class="how-panel">
-      <div class="eyebrow"><span class="dot"></span> FROM CLICK TO GAMEPLAY</div>
-      <h2>How CloudPlay Works</h2>
-      <p style="color:var(--text-dim);font-size:15px;max-width:560px;margin-top:12px;">No installing hardware, no benchmarks. We turn high-end gaming rigs into an on-demand, drag-and-drop utility.</p>
+    <!-- ======================= GAMES ======================= -->
+    <section id="games">
+      <div class="wrap">
+        <div class="sec-head sec-head-row">
+          <div>
+            <div class="eyebrow"><span class="dot"></span>Featured</div>
+            <h2>Jump into something new</h2>
+            <p>Fresh releases and community favorites. Every title is ready to play in seconds.</p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Game filters">
+            <button class="tab active" type="button" role="tab" aria-selected="true">Popular</button>
+            <button class="tab" type="button" role="tab" aria-selected="false">New</button>
+            <button class="tab" type="button" role="tab" aria-selected="false">Co-op</button>
+          </div>
+        </div>
 
-      <div class="steps">
-        <div class="step">
-          <div class="step-top"><div class="step-ic">🎮</div><div class="step-num">01</div></div>
-          <h3>Choose a Game</h3>
-          <p>Browse our catalog of 500+ titles across every genre. Click any tile — there's no purchase or download to start.</p>
-          <div class="link">Instant catalog access →</div>
-        </div>
-        <div class="step">
-          <div class="step-top"><div class="step-ic">✦</div><div class="step-num">02</div></div>
-          <h3>Connect to Cloud</h3>
-          <p>The nearest server spins up a dedicated RTX rig and streams video and audio direct to your screen in seconds.</p>
-          <div class="link">Sub-10ms streaming →</div>
-        </div>
-        <div class="step">
-          <div class="step-top"><div class="step-ic">▶</div><div class="step-num">03</div></div>
-          <h3>Start Playing Instantly</h3>
-          <p>Plug in any controller, keyboard, or touch input. Your save games and settings sync automatically.</p>
-          <div class="link">Any device, played →</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="games-grid">
+          <article class="game-card">
+            <div class="game-cover cover-1">
+              <div class="badges"><span class="badge">Racing</span><span class="badge pill">New</span></div>
+              <h4>Neon Drift</h4>
+            </div>
+            <div class="game-body">
+              <div class="genre">Arcade racer</div>
+              <p>Slide through rain-soaked city circuits in a race against the clock and your friends.</p>
+              <div class="game-meta">
+                <span class="players">8,420 playing</span>
+                <a href="#" class="cta">Play now</a>
+              </div>
+            </div>
+          </article>
 
-<section id="pricing">
-  <div class="wrap" style="text-align:center;">
-    <div class="eyebrow"><span class="dot"></span> MEMBERSHIP &amp; SUBSCRIPTIONS</div>
-    <h2 style="font-size:32px;">Choose Your Computing Rig</h2>
-    <p style="color:var(--text-dim);font-size:15px;max-width:560px;margin:14px auto 44px;">Power your cloud gaming to competition-grade hardware. No hidden fees, cancel anytime with a single click.</p>
+          <article class="game-card">
+            <div class="game-cover cover-2">
+              <div class="badges"><span class="badge">Strategy</span><span class="badge pill">Top rated</span></div>
+              <h4>Ashfall Tactics</h4>
+            </div>
+            <div class="game-body">
+              <div class="genre">Turn-based strategy</div>
+              <p>Lead a squad of survivors across a scorched world, one careful move at a time.</p>
+              <div class="game-meta">
+                <span class="players">5,130 playing</span>
+                <a href="#" class="cta">Play now</a>
+              </div>
+            </div>
+          </article>
 
-    <div class="pricing-grid" style="text-align:left;">
-      <div class="plan">
-        <div class="plan-tag">Free Pilot</div>
-        <div class="price">$0<span> / month</span></div>
-        <div class="plan-desc">Perfect for trying out cloud streaming mechanics on any browser.</div>
-        <ul class="plan-feats">
-          <li><span class="ok">✓</span> 1080p Resolution @ 60 FPS</li>
-          <li><span class="ok">✓</span> Standard Queue Access</li>
-          <li><span class="ok">✓</span> 1-Hour Continuous Session Length</li>
-          <li><span class="ok">✓</span> Access to 40+ Free Titles</li>
-          <li class="off"><span class="no">✕</span> Ray Tracing (RTX)</li>
-        </ul>
-        <a href="#" class="btn btn-ghost">Get Started Free</a>
-      </div>
-      <div class="plan featured">
-        <div class="plan-badge">MOST POPULAR</div>
-        <div class="plan-tag cyan">Pro Streamer</div>
-        <div class="price">$14.99<span> / month</span></div>
-        <div class="plan-desc">High-performance gaming with RTX enabled for mainstream visual perfection.</div>
-        <ul class="plan-feats">
-          <li><span class="ok">✓</span> 4K HDR Resolution @ 60 FPS</li>
-          <li><span class="ok">✓</span> Priority Fast-Lane Queue Access</li>
-          <li><span class="ok">✓</span> 6-Hour Continuous Session Time</li>
-          <li><span class="ok">✓</span> Full RTX Hardware Ray Tracing</li>
-          <li><span class="ok">✓</span> Access to 300+ Premium Library Titles</li>
-        </ul>
-        <a href="#" class="btn btn-cyan">Claim 14-Day Pro Trial</a>
-      </div>
-      <div class="plan">
-        <div class="plan-tag purple">Ultimate Esports Pod</div>
-        <div class="price">$24.99<span> / month</span></div>
-        <div class="plan-desc">Dedicated unthrottled RTX 4090 virtual workstation for demanding pros.</div>
-        <ul class="plan-feats">
-          <li><span class="ok purple">✓</span> 4K HDR @ 120 FPS Extreme Sync</li>
-          <li><span class="ok purple">✓</span> Zero-Wait VIP Instant Pod Allocation</li>
-          <li><span class="ok purple">✓</span> Unlimited Continuous Session Hours</li>
-          <li><span class="ok purple">✓</span> Dedicated RTX 4090 Supercluster Rig</li>
-          <li><span class="ok purple">✓</span> Day-One Blockbuster Access &amp; Discord Perks</li>
-        </ul>
-        <a href="#" class="btn btn-purple">Upgrade to Ultimate</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="features">
-  <div class="wrap">
-    <div class="feature-split">
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-ic">🖥</div>
-          <h3>No Gaming PC Required</h3>
-          <p>Turn a $200 Chromebook or 5-year-old laptop into an RTX 4090 battlestation capable of path-traced raytracing.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-ic purple">☁</div>
-          <h3>Cloud Saves Everywhere</h3>
-          <p>Seamlessly link your Steam, Epic Games, Xbox, and Ubisoft accounts. Your achievements, mods, and saves stay unified.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-ic">✛</div>
-          <h3>Universal Controllers &amp; KBM</h3>
-          <p>Full haptic feedback support for DualSense, Xbox Wireless, Nintendo Switch Pro, and raw 1000Hz gaming mice.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-ic purple">📶</div>
-          <h3>Adaptive Bitrate Engine</h3>
-          <p>Dynamic AI codec modulation scales smoothly between 15 Mbps to 100 Mbps, preventing frame freezing during Wi-Fi dips.</p>
+          <article class="game-card">
+            <div class="game-cover cover-3">
+              <div class="badges"><span class="badge">Shooter</span><span class="badge pill">Co-op</span></div>
+              <h4>Void Runners</h4>
+            </div>
+            <div class="game-body">
+              <div class="genre">4-player co-op shooter</div>
+              <p>Team up to raid drifting space stations and escape before the reactor blows.</p>
+              <div class="game-meta">
+                <span class="players">4,690 playing</span>
+                <a href="#" class="cta">Play now</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="device-panel" id="devices">
-        <div class="eyebrow" style="display:inline-block;">PLAY ON ANY HARDWARE</div>
-        <h2>One Account. Every Display You Own.</h2>
-        <p>CloudPlay works natively in web browsers without plugin dependencies, as well as dedicated apps for desktop and handheld environments.</p>
-        <div class="device-grid">
-          <div class="device"><span class="ic">💻</span><span>Windows</span></div>
-          <div class="device"><span class="ic">💻</span><span>macOS</span></div>
-          <div class="device"><span class="ic">📱</span><span>iOS / iPad</span></div>
-          <div class="device"><span class="ic">📱</span><span>Android</span></div>
-          <div class="device"><span class="ic">📺</span><span>Android / Apple TV</span></div>
-          <div class="device"><span class="ic">🌐</span><span>Web Browsers</span></div>
+    <!-- ======================= HOW IT WORKS ======================= -->
+    <section id="how">
+      <div class="wrap">
+        <div class="how-panel">
+          <div class="sec-head" style="margin-bottom:0">
+            <div class="eyebrow"><span class="dot"></span>How it works</div>
+            <h2>From sign-up to first match in three steps</h2>
+            <p>No installs, no patches, no waiting for downloads.</p>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-top">
+                <div class="step-ic" aria-hidden="true">👤</div>
+                <div class="step-num">1</div>
+              </div>
+              <h3>Create your account</h3>
+              <p>Sign up with your email in under a minute. The Starter plan is free.</p>
+              <a href="#" class="link">Sign up</a>
+            </div>
+
+            <div class="step">
+              <div class="step-top">
+                <div class="step-ic" aria-hidden="true">🎯</div>
+                <div class="step-num">2</div>
+              </div>
+              <h3>Pick a game</h3>
+              <p>Browse the library and choose a title. It launches straight from your browser or app.</p>
+              <a href="#games" class="link">Browse games</a>
+            </div>
+
+            <div class="step">
+              <div class="step-top">
+                <div class="step-ic" aria-hidden="true">🚀</div>
+                <div class="step-num">3</div>
+              </div>
+              <h3>Press play</h3>
+              <p>Use a controller, keyboard, or touch. Your progress saves across every device.</p>
+              <a href="#" class="link">See supported devices</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section>
-  <div class="wrap">
-    <div class="cta-panel">
-      <div class="eyebrow"><span class="dot"></span> Instant Provisioning • Immediate Access</div>
-      <h2>Ready to Step Into the Future of Gaming?</h2>
-      <p>Start your 14-day free trial today. Connect your controller, choose any title from our library, and enter the stream in seconds.</p>
-      <form class="cta-form" onsubmit="return false;">
-        <input type="email" placeholder="Enter your email to claim trial..." aria-label="Email address" required>
-        <button type="submit" class="btn btn-cyan">Get Started →</button>
-      </form>
-      <div class="cta-fine">No credit card charged until day 14. Instant cancellation in Account Settings.</div>
-    </div>
-  </div>
-</section>
+    <!-- ======================= PRICING ======================= -->
+    <section id="pricing">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="eyebrow"><span class="dot"></span>Pricing</div>
+          <h2>Pick the plan that fits how you play</h2>
+          <p>Start free and upgrade whenever you want more. Cancel any time.</p>
+        </div>
 
-<footer>© 2026 CloudPlay. All rights reserved.</footer>
+        <div class="pricing-grid">
+          <!-- Starter -->
+          <div class="plan">
+            <div class="plan-tag">Starter</div>
+            <div class="price">$0 <span>/ month</span></div>
+            <p class="plan-desc">Try the platform with a rotating selection of free games.</p>
+            <ul class="plan-feats">
+              <li><span class="ok">✓</span>40+ free games</li>
+              <li><span class="ok">✓</span>1080p at 60 fps</li>
+              <li><span class="ok">✓</span>1-hour sessions</li>
+              <li class="off"><span class="no">✕</span>Priority servers</li>
+              <li class="off"><span class="no">✕</span>Play with friends online</li>
+            </ul>
+            <a href="#" class="btn btn-ghost">Start free</a>
+          </div>
+
+          <!-- Pro -->
+          <div class="plan featured">
+            <div class="plan-badge">Most popular</div>
+            <div class="plan-tag cyan">Pro</div>
+            <div class="price">$9 <span>/ month</span></div>
+            <p class="plan-desc">The full library in 4K, with priority access and longer sessions.</p>
+            <ul class="plan-feats">
+              <li><span class="ok">✓</span>400+ games</li>
+              <li><span class="ok">✓</span>4K at 60 fps</li>
+              <li><span class="ok">✓</span>8-hour sessions</li>
+              <li><span class="ok">✓</span>Priority servers</li>
+              <li class="off"><span class="no">✕</span>Party mode for 4 players</li>
+            </ul>
+            <a href="#" class="btn btn-cyan">Get Pro</a>
+          </div>
+
+          <!-- Squad -->
+          <div class="plan">
+            <div class="plan-tag purple">Squad</div>
+            <div class="price">$19 <span>/ month</span></div>
+            <p class="plan-desc">Everything in Pro, plus shared play for you and your friends.</p>
+            <ul class="plan-feats">
+              <li><span class="ok purple">✓</span>Everything in Pro</li>
+              <li><span class="ok purple">✓</span>Party mode for 4 players</li>
+              <li><span class="ok purple">✓</span>Unlimited sessions</li>
+              <li><span class="ok purple">✓</span>Voice chat included</li>
+              <li><span class="ok purple">✓</span>Early access to new games</li>
+            </ul>
+            <a href="#" class="btn btn-purple">Get Squad</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FEATURES + DEVICES ======================= -->
+    <section id="features">
+      <div class="wrap feature-split">
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-ic" aria-hidden="true">⚡</div>
+            <h3>Instant launch</h3>
+            <p>Games start in seconds. No installs, no patches, no storage used.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-ic purple" aria-hidden="true">☁</div>
+            <h3>Cloud saves</h3>
+            <p>Your progress follows you, so you can pick up on any device.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-ic" aria-hidden="true">🎮</div>
+            <h3>Controller support</h3>
+            <p>Plug in a gamepad, or use a keyboard or touch controls.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-ic purple" aria-hidden="true">👥</div>
+            <h3>Party play</h3>
+            <p>Invite friends with a link and play together in the same session.</p>
+          </div>
+        </div>
+
+        <div class="device-panel">
+          <div class="eyebrow">Any screen</div>
+          <h2>Start on your TV, finish on your phone</h2>
+          <p>Nexora runs in your browser and in our apps, so your library is with you wherever you are.</p>
+          <div class="device-grid">
+            <div class="device"><div class="ic" aria-hidden="true">📱</div><span>Phone</span></div>
+            <div class="device"><div class="ic" aria-hidden="true">💻</div><span>Laptop</span></div>
+            <div class="device"><div class="ic" aria-hidden="true">📺</div><span>Smart TV</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FINAL CTA ======================= -->
+    <section id="join">
+      <div class="wrap">
+        <div class="cta-panel">
+          <h2>Create a free account and play in under a minute.</h2>
+          <p>Enter your email to get started. You can upgrade or cancel whenever you like.</p>
+          <form class="cta-form" action="#" method="post">
+            <label class="sr-only" for="cta-email">Email address</label>
+            <input id="cta-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button class="btn btn-grad" type="submit">Start playing free</button>
+          </form>
+          <p class="cta-fine">Secure payments. Cancel any time. Help is available 24/7.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Nexora. All rights reserved.</div>
+  </footer>
 
 </body>
 </html>
