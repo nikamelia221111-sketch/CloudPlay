@@ -69,6 +69,8 @@ a {
 img {
   max-width: 100%;
   display: block;
+  height: 100%;
+ 
 }
 
 button {
@@ -401,7 +403,7 @@ nav.wrap {
 
 .stat {
   display: flex;
-  gap: 12px;
+  gap: 30px;
   align-items: flex-start;
 }
 
@@ -410,6 +412,7 @@ nav.wrap {
   font-size: 18px;
   flex-shrink: 0;
   margin-top: 2px;
+
 }
 
 .stat b {
@@ -417,6 +420,7 @@ nav.wrap {
   font-size: 19px;
   font-family: var(--font-display);
   font-weight: 700;
+  
 }
 
 .stat span {
@@ -496,7 +500,6 @@ section {
   height: 200px;
   display: flex;
   align-items: flex-end;
-  padding: 14px;
   background-size: cover;
   background-position: center;
 }
@@ -948,6 +951,13 @@ footer {
   color: var(--text-faint);
   font-size: 13px;
 }
+h4 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
 
 @media (max-width: 900px) {
   .nav-links {
